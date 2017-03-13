@@ -1,0 +1,137 @@
+### Ports
+
+*  50309
+
+### Metrics
+
+* http://localhost:50309/metrics
+
+### Locations 
+
+* /api?hours=[int]&limit=[int]
+* select from subscriptions where pixel is not empty and pixel_sent is false and, according to ratio, send pixels to publisher 
+
+* /publisher 
+* for testing/developing purposes
+
+### Testing
+
+Pixel smaples:
+
+* Mobusi a. sample = 5432104769mb85528554321 b. length = 23 character c. 
+* Kimia a. sample = hIDMA1511170000000001035050071575WF0TPC79c000723PZ02505 b. length = 55 character c.  
+
+To test pixel, call twice with different msisdn numbers urls:
+* mumbai
+   * http://platform.pk.linkit360.ru/campaign/f90f2aca5c640289d0a29417bcb63a37?msisdn=926777777777&aff_sub=5432104769mb85528554321
+
+* dev
+   * http://dev.pk.linkit360.ru/campaign/f90f2aca5c640289d0a29417bcb63a37?msisdn=9277777777&aff_sub=5432104769mb85528554321
+
+   * http://dev.pk.linkit360.ru/campaign/82cec96096d4281b7c95cd7e74623496?msisdn=9277777777&aff_sub=5432104769mb85528554321
+
+NB: if there are no settings in pixel_settings table found, no pixels would be sent
+Remember to call cqr request to inmem service after editing pixel settings.
+
+
+### Queues 
+#### In
+
+* pixels 
+
+### Tables
+
+* pixel_settings
+* pixel_transactions
+* subscriptions
+
+### Explanation
+Daemon to send pixels. Pixels are hashes sent by a publisher to us, so we could inform them "this msisdn was ok" using a callback. 
+
+# Requirements
+
+Allow to edit from admin page following options:
+
+* enable / disable pixels request for operator_code, campaign id, publisher 
+* control pixel send ratio: do not send each pixel sent request to publisher, sent only each *-d (first, second, third ...)
+
+Right after billing, if everything is OK (not rejected, not blacklisted and has been sent to operator)  - make a request to publisher.
+
+Provide API handler, to re-send unsent pixels (filter them by date, limit)
+
+# Implementation
+
+## Tables
+
+### pixel_settings
+
+    CREATE TABLE public.xmp_pixel_settings (
+        id SERIAL PRIMARY KEY ,
+        id_campaign INT NOT NULL,
+        operator_code INTEGER NOT NULL DEFAULT 0,
+        country_code INTEGER NOT NULL DEFAULT 0,
+        publisher VARCHAR(511) NOT NULL DEFAULT '',
+        endpoint VARCHAR(2047) NOT NULL DEFAULT '',
+        timeout INT NOT NULL DEFAULT 30,
+        enabled BOOLEAN NOT NULL DEFAULT false,
+        ratio INT NOT NULL DEFAULT 2
+    );
+
+
+**xmp_pixel_settings** to be edited from CMS:
+
+Here:
+
+* id - just id, not in use
+* id_campaign - campaign id from campaigns table
+* publisher - publisher name, alias, etc.
+* endpoint - url where to send GET request in format: http://wap.singiku.com/pass/jojokucpaga.php?aff_sub=%pixel% 
+* timeout - how many seconds wait for
+
+* ratio - the sequence number to be sent. For example, 
+
+ * if ratio == 1, send each
+
+ * if ratio == 2, send each second
+
+ * if ratio == 10, skip 9 and send the last one, 10-th pixel notification
+
+### pixel_transactions
+
+In the table xmp_pixel_transactions, endpoint - is actually used endpoint. 
+
+    CREATE TABLE public.xmp_pixel_transactions (
+        id SERIAL PRIMARY KEY,
+        created_at TIMESTAMP NOT NULL DEFAULT now(),
+        tid CHARACTER VARYING(127) NOT NULL DEFAULT '',
+        msisdn CHARACTER VARYING(32) NOT NULL DEFAULT '',
+        id_campaign INTEGER NOT NULL DEFAULT 0,
+        operator_code INTEGER NOT NULL DEFAULT 0,
+        country_code INTEGER NOT NULL DEFAULT 0,
+        pixel VARCHAR(511) NOT NULL DEFAULT '',
+        endpoint VARCHAR(511) NOT NULL DEFAULT '',
+        publisher VARCHAR(511) NOT NULL DEFAULT '',
+        response_code INT NOT NULL DEFAULT 0
+    );
+
+
+### API
+
+You could call it locally, via
+    curl "http://localhost:50308/api?limit=10&hours=10"
+
+* limit - limit of records to be sent
+* hours - search records from now to hours ago
+
+If no hours specified, limit parameter is applied only.
+If no limit applied, default limit is in action (500 records)
+
+### Configuration
+
+* delay - delay in seconds between calls to any publisher
+* api
+
+ * limit: 500  - default limit could be set in config
+
+ * hours: 0    - if default hours in 0, no default hours 
+
