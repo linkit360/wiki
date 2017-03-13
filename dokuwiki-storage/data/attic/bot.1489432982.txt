@@ -1,0 +1,32 @@
+Bot name
+
+* https://www.facebook.com/business/help/community/question/?id=1404600559556529
+
+Callback structure
+
+* https://developers.facebook.com/docs/messenger-platform/send-api-reference/quick-replies
+
+Get Info by user id
+
+* https://chatbotsmagazine.com/fb-messenger-bot-how-to-identify-a-user-via-page-app-scoped-user-ids-f95b807b7e46#.56qrrfms6
+
+SI for HR bot
+
+* https://habrahabr.ru/company/inoventica/blog/322292/
+* https://habrahabr.ru/post/322602/ 
+* Selling the invisible - some useful ideas 
+
+# Ideas
+
+* https://vc.ru/p/robot-instead-human
+
+# Competitors
+
+* https://pennycat.co
+* https://www.dashbot.io
+* https://www.klarna.com
+
+# Similar
+
+* http://venturebeat.com/2016/12/01/dashbot-raises-2-million-for-its-bot-analytics-service/
+* http://botanalytics.co/

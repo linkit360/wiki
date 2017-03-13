@@ -1,0 +1,11 @@
+# PostPaid numbers 
+
+Numbers that on operator side have tariff plan "pay after consumed"
+
+# BlackList
+
+Numbers of VIP, politicians, public etc., that must not be paid.
+
+# TimeZones 
+
+* https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

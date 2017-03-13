@@ -25,7 +25,6 @@ Runs on monitoring host
 ### Workflow
 
 * [[Backlog|Backlog]]
-* [[Glossary]]
 * [[Deployment instructions|Deployment-instructions]]
 * [[Inject Tools|Inject-Tools]]
 * [[DBA tools|DBA-tools]]
