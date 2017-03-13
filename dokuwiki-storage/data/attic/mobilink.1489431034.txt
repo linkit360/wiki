@@ -1,0 +1,62 @@
+### Scheme
+
+![mobilink scheme](https://github.com/vostrok/operator/blob/master/pk/mobilink/doc/mobilink.png)
+
+### System
+
+* DB: linkit_mobilink:linkit-mobilink.cb2q7f7mvbwr.ap-south-1.rds.amazonaws.com
+* RabbitMQ: localhost
+
+### Ports
+
+* http: 50306
+
+### Metrics
+
+* http://localhost:50306/metrics
+
+### Locations 
+
+For testing/developing purposes:
+
+* /mobilink/paid
+* /mobilink/failed
+* /mobilink/postpaid
+
+* /metrics
+
+### Queues 
+
+#### In
+
+* mobilink_requests
+* mobilink_sms_send
+
+#### out
+
+* mobilink_response
+* mobilink_sms_response
+
+### Tables
+
+No tables
+
+### Backlog
+
+* RPS: take from database, not from config
+* msisdn prefix take from inmem
+
+
+### Test message
+
+Use on live smssend binary.
+
+[/home/centos/linkit]$ ./smssend -h
+
+Usage of ./smssend:
+
+    -msg string
+    	test mesage (default "Test message")
+
+    -to string
+    	msisdn (default "923009102250")
