@@ -1,0 +1,127 @@
+## Rejected Check
+  
+select count(*) from xmp_subscriptions where result != 'rejected'
+and (CURRENT_TIMESTAMP - INTERVAL '1 day' ) < xmp_subscriptions.created_at
+and msisdn in ( select msisdn from xmp_subscriptions where result = 'rejected'
+and to_char(created_at, 'YYYY-MM-DD') = '2016-12-08' );
+
+select count(DISTINCT msisdn) from xmp_subscriptions where result = 'rejected'
+and to_char(created_at, 'YYYY-MM-DD') = '2016-12-08';
+
+## Campaign Autoclick 
+
+select tid, count(*) from xmp_subscriptions
+where
+  to_char(created_at, 'YYYY-MM-DD') = '2016-12-08'
+  and msisdn != ''
+group by tid having count(tid) > 1;
+
+## Admin interface
+### LP Hits 
+
+    SELECT count(*) as count 
+    FROM xmp_campaigns_access 
+    WHERE to_char(access_at, 'YYYY-MM-DD') = :day
+
+    
+### LP Hits Msisdn
+
+    SELECT count(*) as count 
+    FROM xmp_campaigns_access 
+    WHERE msisdn != '' AND to_char(access_at, 'YYYY-MM-DD') = :day
+
+
+### Total MO (A)
+Who came, total today subscriptions 
+
+    SELECT count(*) as count 
+    FROM xmp_subscriptions 
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day 
+    AND result not in ('rejected', ‘blacklisted’, ‘postpaid’, ‘cancelled')
+
+### Total MO Rejected, BlackListed, PostPaid (B)
+
+    SELECT count(msisdn) as count 
+    FROM xmp_subscriptions 
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day
+    AND result in ('rejected', ‘blacklisted’,’postpaid’, ‘cancelled) 
+
+A+B= total MO hits
+
+### Total MO Uniq
+
+    SELECT count(DISTINCT (msisdn)) as count 
+    FROM xmp_subscriptions
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day  
+  
+### Total MO Uniq 30 days
+(continuing)
+
+### Total MO Uniq Success Charge
+BOTH uniq today and uniq for last 30 days
+
+    SELECT count(DISTINCT (msisdn)) as count 
+    FROM xmp_transactions
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day 
+    AND result = 'paid'
+
+
+### Total MO Success Charge
+First charge OK (MO)
+
+    SELECT count(*) as count 
+    FROM xmp_transactions — ok
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day 
+    AND result = 'paid'
+
+### Total MO Failed Charge 
+
+    SELECT count(*) as count 
+    FROM xmp_transactions
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day 
+    AND result = 'failed'
+
+
+### Total MO Revenue
+
+    SELECT count(*) as count
+    FROM xmp_transactions 
+    WHERE to_char(created_at, 'YYYY-MM-DD') = :day 
+    AND result = 'paid'
+
+
+### Total Retry
+ToDo: we are not saving history of retry value
+count of retries on the day end
+
+    SELECT count(*) as count
+    FROM xmp_retries 
+    WHERE to_char(created_at, 'YYYY-MM-DD') <= :day                
+         
+### Total Uniq Retry
+
+    SELECT count(DISTINCT (msisdn)) as count 
+    FROM xmp_retries 
+    WHERE to_char(created_at, 'YYYY-MM-DD') <= :day                
+
+
+### Total Success Retry
+
+    SELECT count(*) as count 
+    FROM xmp_transactions 
+    WHERE to_char(created_at, 'YYYY-MM-DD') <= :day 
+    AND result = 'retry_paid'
+
+### Total Failed Retry
+
+    SELECT count(*) as count 
+    FROM xmp_transactions 
+    WHERE to_char(created_at, 'YYYY-MM-DD') <= :day 
+    AND result = 'retry_failed'
+
+### Total Retry Revenue
+
+    SELECT count(*) as count
+    FROM xmp_transactions 
+    WHERE to_char(created_at, 'YYYY-MM-DD') <= :day
+    AND result = 'retry_paid'

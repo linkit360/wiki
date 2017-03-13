@@ -1,0 +1,54 @@
+## Study Learn
+
+* HTTP 2
+* gRPC
+* https://habrahabr.ru/company/avito/blog/322384/ AvitoTech
+* https://www.slideshare.net/AvitoTech/zenhotels HTTP2 QUIC
+* Kubernetes
+* ML https://habrahabr.ru/post/322188/
+* Analitycs Edge https://www.edx.org/course/analytics-edge-mitx-15-071x-2
+* Redis Push events 
+
+
+## Technical usability 
+
+* system simplify
+* create tests for handlers for all sides
+* write interfaces and write tests for them
+* pass invalid data to tests to be sure we get expected response
+
+### Prepare for Zong
+
+Use RabbitMQ and add 'pending' status, when record currently is in rabbit mq queue
+Steps:
+* select records from database
+* mark selected records as pending
+* send them into queue
+* read from queue, check them, get response from operator, update status (not pending: paid or failed), write subscription status and transaction log, process retries
+* in case of any error, return to queue
+* create API method
+
+## Filter content by OS
+
+Do not send APK's for Symbian
+
+## Filter content by subcategory / category / publisher
+
+## MAX revenue limit per day per service
+
+
+## Libs
+
+* https://github.com/cloudflare/bm
+* https://github.com/aerosol/signerl
+* https://github.com/google/nsjail
+* https://github.com/grpc/grpc-go 
+* https://github.com/fastos/fastsocket
+* https://github.com/sourcegraph/appdash
+* https://github.com/bitly/forgettable
+* https://github.com/comotion/edd
+* https://github.com/cihangir/suid
+* https://github.com/beefsack/go-rate
+* https://github.com/express42/elliptics-go
+* https://github.com/dolfelt/beanstalkd
+* https://github.com/arya/bloom_filter

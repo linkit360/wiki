@@ -1,0 +1,69 @@
+### Connect Calendar
+
+- Monday demo: demonstration and check what we have deployed and implemented
+- Everyday standups at 17-00 - no more than 10 min, what
+- Retro at Friday at 17-00 - live things
+
+### Version
+
+* Tag version v1.6 is save for mobilink
+* Tag version v1.7.7 is save for Yondu (unsubscribe, content unique urls)
+* Tag version v1.7;7 is save for cheese.
+
+### Wiki 
+
+Runs on monitoring host
+* docker run -d -p 8888:80 --name dokuwiki istepanov/dokuwiki:2.0
+* docker exec  -it 4103730f58ad sh
+* files are in cd /var/dokuwiki-storage/ 
+* taken from here https://hub.docker.com/r/istepanov/dokuwiki/ 
+* Copy files:  docker cp foo.txt mycontainer:/foo.txt
+
+
+### Workflow
+
+* [[Plans|Plans]]
+* [[Backlog|Backlog]]
+* [[Deployment instructions|Deployment-instructions]]
+* [[Inject Tools|Inject-Tools]]
+* [[DBA tools|DBA-tools]]
+
+### Stats and alerts
+
+* [[Monitoring|Monitoring]]
+* [[Statistics and Analytics| Statistics-and-Analytics]]
+
+### Services 
+
+1. [[Contentd|Contentd-50301,-50302]]
+2. [[Dispatcherd|Dispatcher-50300]]
+3. [[Miscellaneous |Miscellaneous-50303]]
+4. [[MT manager|MT-Manager-50305]]
+5. [[Pixels|Pixels-50309]]
+6. [[Q-Listener|QListener-50304]]
+7. [[RPC InMemory|RPC-InMemory-50307,-50308]]
+
+### Telco:
+
+1. [[Mobilink|Mobilink-50306]]
+2. [[Yondu|Yondu-50306]]
+3. [[Cheese|Cheese-50306]]
+4. [[QRTech|QRTech-50326]]
+4. [[Beeline|Beeline-50306]]
+
+### Ideas
+
+ [[From idea to realization|From-idea-to-realization]]
+
+### Bots
+
+1. [[Bot|Bot]] 
+
+
+### Servers
+
+* Singapoore: @52.77.203.25
+* Mumbai @52.66.23.201
+* Dev @35.154.8.158
+* Monitoring @52.220.200.94 
+* OldMobilink @52.66.132.93

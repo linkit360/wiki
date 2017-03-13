@@ -1,0 +1,88 @@
+# Port 
+* http 50303 
+
+# Logs 
+
+You can view job logs about the queried data in a separate file, file from log_path column (xmp_jobs).
+
+Logging format:
+
+* injection job: id = line number
+* expired job: id = id_retry
+
+* action - the action we apply (same for dry_run and not)
+* error - in case of any error
+* msisdn is original row from file for injection
+
+**If no action - it's the error of jobs service. Action must be specified always** 
+
+Log examples:
+
+* time="2017-02-01T10:39:20Z" level=info msg=123123123123 action=skip error="Wrong prefix: 123123123123" id=1
+* [01/02/2017, 13:32:04] Helena Nevskaya: time="2017-02-01T10:31:44Z" level=info msg=923000217540 action=sent id=365256
+
+# Handlers
+
+*  /metrics - for Prometheus Metrics and Alerts
+* /api - for suspended MO, not noticed in job history
+* /jobs/start - to start job, created by CMS 
+* /jobs/stop - stop running job
+* /jobs/resume - resume canceled job
+* /jobs/status - show status of running jobs
+
+/jobs handlers have parameters:
+
+* id - id of the job in xmp_jobs table
+
+### Types
+
+xmp_jobs types:
+
+* job_status  ('ready', 'in progress', 'canceled', 'done', 'error');
+* job_type  ('injection', 'expired')
+
+# Job
+
+* list of jobs - to see who, to see the file, see settings
+* get notification that it has been done (to CMS API) - ?id=123213 &status=done / status = cancelled 
+* in the table update status - the job is finished 
+* API call to start job ?id=123123 
+* API call stop  ?id=123123
+
+# Sources
+
+* from file (external source) - files in /var/www/xmp.linkit360.ru/web/injections
+* from xmp_retries_expired
+
+# Table 
+
+* date
+* id_user
+* type (injection, expired)
+* status (ready, in progress, cancelled, done) 
+* params jsonb (filter by expired retries) (any combination of these flags):
+
+ * date_from=2016-10-11 - applicable only for expired
+
+ * date_to=2016-10-10   - applicable only for expired
+
+ * count=123 - both applicable, expired, injection
+
+ * offset=571 - as for now, it's applicable only for expired.
+
+ * order=desc, asc  - applicable only for expired
+
+ * never=1 - no any official paid transaction ('paid' , 'retry_paid') in xmp_transactions 
+
+ * service_id=290 - both
+
+ * campaign_id=355 - both
+
+ * dry_run [true/false] deafult is false. If true, selects records and checks them, without sending to the queue
+
+ * example: {"date_from":"2016-10-11", ... }
+
+* file_name varchar(127) date + timestamp.csv
+* run_at - the time the job was specified to run, not actual run at
+* finish_at - the time the job was finished
+* log_path - file path with exact reasons of processed msisdn's

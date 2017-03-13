@@ -1,0 +1,64 @@
+### Ports
+
+* 80 port proxy pass to 50300  (http)
+
+
+### Metrics
+
+* http://pk.linkit360.ru:50300/metrics
+
+### Queues
+
+#### Out
+
+* <operator_name>-new-subscriptions
+* access_campaign
+* user_actions 
+
+### Locations 
+
+* /lp/:campaign_link
+Landing page for the campaign
+
+* /campaign/:campaign_hash
+Record campaign access and gain content
+
+Static paths to get the content (probably, need only robots and favicon)
+
+* /static/
+* /favicon.ico
+* /robots.txt
+* /metrics
+
+### Tables
+
+* campaigns
+* operators
+* operator_ip
+* operator_msisdn_prefix
+
+### Testing
+
+Url: http://52.66.23.201/mobilink-p2
+
+Test campaign access: 
+
+    curl -L -H 'HTTP_MSISDN: 928974412092' -H 'X-Real-Ip: 10.80.128.1' -H 'Host: pk.linkit360.ru' "http://52.66.23.201/mobilink-p2"  
+
+Test campaign agreed (continue):
+
+    curl -L -H 'HTTP_MSISDN: 928974412092' -H 'X-Real-Ip: 10.80.128.1' -H 'Host: pk.linkit360.ru' "http://52.66.23.201/campaign/f90f2aca5c640289d0a29417bcb63a37"
+
+* http://dev.pk.linkit360.ru/cpm.k.ak50?msisdn=9277777777&aff_sub=5432104769mb85528554321
+
+
+# Settings
+
+In xmp_campaigns:
+
+* active - active campaign is being loaded by dispatcher 
+
+* operator_depended_processing bool not null default false;
+If operator_depended_processing is true, then we do not just serve campaign, but also get some important information from user actions - in case of beeline it's the session id (serviceKey)
+
+* page_success VARCHAR(2047) not null default '' - page_success - it's the page abonent will be redirected to id charge is successful.

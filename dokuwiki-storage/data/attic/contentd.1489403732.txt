@@ -1,0 +1,31 @@
+### Ports
+
+* rpc 50301
+* http 50302
+
+### Metrics
+
+* http://localhost:50302/metrics 
+
+### Aliases
+
+* **c.stop**   stops dispatcherd
+* **c.start**  starts dispatcherd
+
+### RPC Methods
+
+SVC.GetContentByCampaign
+
+### Queues
+
+#### Out
+
+* content_sent
+
+### Tables
+
+* campaigns
+* services
+* content
+* content_sent
+* service_content

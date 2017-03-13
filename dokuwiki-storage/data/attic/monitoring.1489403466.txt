@@ -1,0 +1,132 @@
+# Naming convention
+Inside the Prometheus config, we could make a _**single alert rule**_ if there are such metric in each service (without service prefix but with job/service marker to distinguish them). 
+
+See example alert for [up](http://52.220.200.94:9090/graph?g0.range_input=1h&g0.expr=up&g0.tab=1) and for golang metrics.
+
+It's easier to maintain them, less wrinting, more understandable, so let's common metrics be without service prefix.
+
+* each service minimum required: 
+   * success [service success calls / requests overall]
+   * errors  [service errors while processing overall] 
+   * rbmq_reading_chan_size - rbmq reading channel size
+   * rbmq_pending_chan_size - rbmq pending channel size
+   * db_errors [db errors] 
+   * add_to_db_errors
+   * add_to_db_success
+   * dropped msg
+   * empty msg
+   * charge_success (by perator name in namespace or subsystem)
+   * charge_errors (by perator name in namespace or subsystem)
+   * sms_success
+   * sms_errors
+   * notify_errors
+
+# Alerts
+* http://52.220.200.94:9090/alerts
+   * service is down
+   * contentd errors is more than 0 for more than 3 minutes
+   * load campaign error 
+   * load operator headers error
+
+# Resources 
+
+### http://monitoring.linkit360.ru/dashboard/db/mumbai
+
+### Best practices of monitoring metrics naming
+
+* https://prometheus.io/docs/practices/naming/
+
+### Best practices of alerting policy written by Rob Ewaschuk's
+
+* https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q 
+
+* Over-monitoring is a harder problem to solve than under-monitoring.
+
+* Pages should be urgent, important, actionable, and real.
+
+* You should almost always be able to classify the problem into one of:
+
+  * availability & basic functionality; 
+
+  * latency; correctness (completeness, freshness and durability of data); 
+
+  *  feature-specific problems
+
+* Include cause-based information in symptom-based pages or on dashboards, but avoid alerting directly on causes.
+
+* Weekly review of all pages, and quarterly statistics
+
+// May the queries flow, and your pagers be quiet. 
+
+### How to query prometheus 
+* https://www.digitalocean.com/community/tutorials/how-to-query-prometheus-on-ubuntu-14-04-part-1
+ 
+* https://www.digitalocean.com/community/tutorials/how-to-query-prometheus-on-ubuntu-14-04-part-2 
+
+
+# Alters
+Service to send alerts: 
+* http://telegram.me/LinkITMonBot 
+
+Monitor each active service
+* ServiceDown 
+
+
+
+### Systemd:
+
+* supervisor
+* rabbitmq
+* postgres
+* nginx 
+
+### Urls:
+* supervisor prod http://supervisor.pk.linkit360.ru
+* supervisor dev http://supervisor.dev.pk.linkit360.ru
+
+(State for now: dispatcherd and contentd do not reset counters gauge)
+
+# Dispatcherd
+
+* request time
+* errors overall
+* operator is not supported
+* msisdn is not found in headers
+* sent content errors
+* if campaign path (record) is incorrect, alert and reload
+
+# Contentd
+* Campaign not found
+* Process request timings
+
+# QListener
+
+## Queues stat types:
+* count
+* dropped
+* empty 
+
+## Queues
+* content_sent
+* access_campaign
+* user_actions 
+
+# Queue specific:
+* incorrect campaign hash count
+* parse geo ip errors 
+* new subscriptions count
+
+# Billing
+
+* subscriptions count (got from db)
+* retry count (got from db)
+* last success paid
+* mobilink error rate 
+* mobilink tarifficate channel queue
+* mobilink responses channel queue
+
+
+# Overall 
+* db_errors
+* rbmq queue
+* rbmq connected

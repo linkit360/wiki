@@ -1,0 +1,14 @@
+No any automation.
+
+* Create a backup folder, usually named linkit-old
+* Copy configs from dev to mobilink-1
+* Check, configs have been changed since last deploy
+* Make diffs, configure properly
+* Separately on-by-one, run new binaries with new configs, checking them that ok (modules would fail : port is buzy)
+* finally, module restart order as following:
+
+1) InMemory
+2) Contentd
+3) Dispatcher, Pixels, QListener, MtManager
+
+If smth goes wrong, rename new linkit to linkit-new. **COPY** lonkit-old to linkit, restart.
