@@ -1,0 +1,63 @@
+### Scheme
+
+
+### LP
+
+* http://platform.th.linkit360.ru/qrlp/mobilink-p2?msisdn=928777777777&aff_sub=5432104769mb85528554321
+* url is passed on the html in {{ .Url }} variable
+
+### About
+
+- Q: we just need to monitor DN?
+- A: yes
+
+- Q: in what period ?
+- A: 8AM ( First BC) 12PM 2:30PM 4:30PM 6:30PM 8:30PM 10:30PM
+
+- Q: what if you do not receive MT with content at least once (the content sent in MT), as in lets say the end didnt send us the content for 18/2/2017 broadcast??
+- A: we will been notified about it, and will inform to you, no MT will be sent on that day, but we advise to insert the content in advance basis, you can insert the content with the bc date a day advance or a month
+
+- Q: so we should send MT before 8 AM, even if your user notification window is from 8:30 am to 12:30pm?
+- A: u can send anytime from 8AM to 6PM but of coz to get the optimized DR Success best is to send it early
+
+- Q: so we need to send one MT call per service or one MT call per each subscription we have on our side?
+- A: 1 mt per service
+
+### System
+
+* DB: linkit_qrtech:linkit-prod.ceta2yrq1zco.ap-southeast-1.rds.amazonaws.com
+* RabbitMQ: localhost
+
+### Ports
+
+* http: 50306
+
+### Metrics
+
+* http://localhost:50326/metrics
+
+### Locations 
+
+* /metrics
+* /qr/mt/failed       
+* /qr/mt/ok       
+* /api/mo      
+* /api/dn
+
+### Queues 
+
+#### out
+
+* qrtech_mt
+* qrtech_mo
+* transaction_log
+* pixels
+* mt_manager
+
+### Tables
+
+No tables
+
+## Backlog
+
+* MT message: didn't receive result=1

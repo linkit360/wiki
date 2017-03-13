@@ -1,0 +1,43 @@
+### System
+
+* DB: linkit_cheese:linkit-prod.ceta2yrq1zco.ap-southeast-1.rds.amazonaws.com
+* RabbitMQ: localhost
+
+### Ports
+
+* http: 50306
+
+
+### Metrics
+
+* http://localhost:50306/metrics
+
+### Locations 
+
+* /metrics
+* /api/mo/ais        
+* /api/mo/dtac       
+* /api/mo/trueh      
+
+### Queues 
+
+#### out
+
+* cheese_mo
+* transaction_log
+* pixels
+
+### Tables
+No tables
+
+
+### Test
+
+* curl -L "http://35.154.8.158/mobilink-p2?msisdn=928777777777&aff_sub=hIDMA1511170000000001035050071575WF0TPC79c000723PZ02345"
+* * check pixel added in xmp_pixel_buffer
+
+
+### Backlog
+
+* RPS: take from database, not from config
+* msisdn prefix take from inmem

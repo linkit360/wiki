@@ -1,0 +1,153 @@
+### Scheme
+
+ {{ undefined:yondu.png }}
+
+
+### CheckList for Yondu
+
+* unsubscribe works
+* subscribe works
+* rejected rule (second MO tarifficated with content sending)
+* unique url sends content
+* transaction log / transactions / subscriptions / sent contents / unique urls write
+
+### System
+
+* DB linkit_yondu@linkit-prod.ceta2yrq1zco.ap-southeast-1.rds.amazonaws.com
+* RabbitMQ: localhost
+
+### Test script
+
+* can turn off periodics in config
+* can turn off retries in config
+* can edit unsubscribe words in config
+
+#### MO 
+
+Subscribe url: 
+
+* curl -v "http://localhost:50306/api/mo?msisdn=639055209652&transid=2910DMP9055209652148403120057&timestamp=20161227101000&message=play%20on"
+* *yondu module* accepts and writes access log in file
+* rec remembered in leveldb to restore when callback comes
+* add new periodic subscription in xmp_subscriptions
+* add mo xmp_operator_transaction_log
+* check rec on blacklisted, rejected
+* added to active subscription cache
+* *ok*
+
+* sent consent event if it was not rejected
+* write consent in xmp_operator_transaction_log
+
+* *rejected*
+* sent mt message - You already subscribed on this service. Please find more games here: 
+* set periodic: false to xmp_subscriptions
+* send charge request to Yondu
+* *yondu module* adds in file and in db charge xmp_operator_transaction_log
+
+#### Content Uniq Urls
+
+* content uniq url from sms to user - opens ok
+* a record in content_sent added with uniq url and complete information about the transaction
+
+#### Callback
+
+* *yondu module* accepts and writes access log in file
+* get message from leveldb or database (if not found)
+* write callback operator transaction log 
+* write transaction log
+* subscription status ('paid', 'failed'), last_pay_attempt updated in xmp_subscriptions
+* move to xmp_retries if was not paid
+* operator log in xmp_operator_transaction_log with charge type
+* add rec in xmp_transactions
+
+
+#### Periodics
+
+* get periodic records from xmp_subscriptions table
+* send charge request in 
+* subscription status 'pending' in xmp_subscriptions
+* send charge req to telco with priority 1
+* *yondu module* writes operator log in file and in xmp_operator_transaction_log with charge type
+
+#### Retries
+
+* get retries with not 'pending' status
+* check retry - not blacklisted
+* set status in xmp_retries to 'pending'
+* send charge req to telco with priority 0
+* *yondu module* adds rec in file and in xmp_operator_transaction_log with type charge
+
+#### MO unsubscribe on keyword off
+
+* *yondu module* writes in file mo unsubscribe come
+* *mt manager module* writes in file and writes xmp_operator_transaction_log with mo type
+* set subscription status 'canceled' in xmp_subscriptions
+* send sms to user with text: 'You have been unsubscribed' 
+* removed from active subscription cache 
+* failed transactions in retries are being kept and we still process them
+* *yondu module* writes in file and write xmp_operator_transaction_log with mt type
+
+## Questions to Yondu
+
+* Cancel subscription unsubscribe : inform Yondu: how could we inform? Do we need to inform? 
+No
+
+Trans ID Format:
+
+* access code, usually short number
+* first 3 letters of our partners name (KRE)
+* mobile number
+* timestamp
+* sample: 2910KRE9055209652148403127752002
+* you will use KRE for the 3 letters this stands for Kreatif Bersama.
+
+Trans code for MO request differs from the format 2910DMP9055209652148403120057.
+
+* 2910 DMP <phone number> timestamp. What is DMP? DMP is our default. This for MO. 
+
+TransID for CallBack 2910KRE9055209652148403127752002 
+
+* 2910 KRE 9055209652 1484031277 52002
+* 2910 - our code. 
+* KRE - also our code 
+* 9055209652 - msisdn
+* 1484031277 - timestamp
+* 52002 -- what is it? 
+
+This is the last part is for our indexes our message composed of 2 or more indexes this depends on the message. 
+
+### Ports
+
+### Aliases 
+
+On dev:
+
+### Metrics
+
+* http://localhost:50306/metrics
+
+### Locations 
+
+Our API for Yonndu:
+
+* GET /metrics
+* GET /api/mo
+* GET /api/callback
+
+For testing/developing purposes:
+
+* GET    /yondu/charging/:msisdn/:amount
+* GET    /yondu/consent/:msisdn/:amount 
+* GET    /yondu/invalid/:msisdn/:text
+
+### Queues 
+#### In
+
+* yondu_mo
+* yondu_callback
+
+#### out
+
+* yondu_consent
+* yondu_mt
+* yondu_charge 
