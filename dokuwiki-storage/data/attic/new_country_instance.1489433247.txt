@@ -1,0 +1,15 @@
+# Parts of the system
+
+* mon 52.220.200.94
+* home 83.167.122.116 + .. 
+* office 87.249.6.34
+* dev 35.154.8.158
+
+# Port actions 
+
+* rabbitmq 15672 http port 
+* domain name for country platform
+* domain name for supervisor
+* Open 50300 - 50340 ports for prometheus on mon
+* Open 5432 port from server to database 
+* 22 port from dev to new server 
