@@ -1,0 +1,33 @@
+### Ports
+* rpc 50307
+* http 50308
+
+### Metrics
+
+* http://localhost:50308/metrics
+
+### Tables
+
+Actual tables you can find here: http://localhost:50308/tables
+
+### Locations 
+
+* /tables
+* /metrics
+* /cqr?t=[tables]
+
+### Queues 
+#### In
+#### Out
+
+### CQR
+
+* /cqr?t=**[tables]**
+
+### TODO: HTTP API method: info on msisdn
+
+Response: 
+
+* country
+* operator code
+* operator name
