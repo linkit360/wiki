@@ -16,5 +16,4 @@ AD Report
 * **TotalMoSuccess**- (int) All the success purchase transactions
 * **Pixels** - (int) Total count of pixels has been sent
 
-Group by `Provider > Operator > Campaign`
 
