@@ -1,0 +1,12 @@
+### Ports
+
+* 50313 (tcp)
+
+### Queues
+
+AD Report
+
+reportDate - unix timestamp
+campaign
+totalLpHits - total lp hits
+totalLpMsisdnHits - total_lp_msisdn_hits
