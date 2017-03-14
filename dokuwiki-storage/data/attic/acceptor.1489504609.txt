@@ -7,7 +7,7 @@
 AD Report
 
 * **ReportDate** - (unix timestamp) report time
-* **Campaign** - (int) campaign ID
+* **Campaign** - campaign ID (?)
 * **TotalLpHits** - (int) All users which came on LP
 * **TotalLpMsisdnHits** - (int) All users which came with MSISDN
 * **TotalMo** - (int) All the valid purchase transactions
