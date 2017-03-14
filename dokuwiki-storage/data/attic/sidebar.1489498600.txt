@@ -1,0 +1,4 @@
+~~NOCACHE~~	
+[float left background=#eeeeff  width=300]
+<minimap suppress="DokuWiki" includeDirectory="false" debug="false">
+[/float]
