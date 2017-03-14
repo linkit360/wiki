@@ -45,7 +45,7 @@ Runs on monitoring host
 4. [[Pixels|Pixels-50309]]
 5. [[Q-Listener|QListener-50304]]
 6. [[RPC InMemory|RPC-InMemory-50307,-50308]]
-7. [[Acceptor|Acceptor]]
+7. [[1|2]]
 
 ### Telco:
 
