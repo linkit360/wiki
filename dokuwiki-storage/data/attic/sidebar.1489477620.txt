@@ -1,0 +1,3 @@
+Linkit Vostor Team
+
+<minimap suppress="DokuWiki" includeDirectory="false" debug="false">
