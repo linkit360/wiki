@@ -1,7 +1,7 @@
-a:2:{s:7:"current";a:7:{s:4:"date";a:2:{s:7:"created";i:1489401934;s:8:"modified";i:1489401934;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1489401934;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"C";s:2:"id";s:23:"deployment_instructions";s:4:"user";s:6:"helena";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";s:10:"sizechange";i:520;}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:316:"No any automation.
+a:2:{s:7:"current";a:7:{s:4:"date";a:2:{s:7:"created";i:1489401934;s:8:"modified";i:1489475115;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";b:0;s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:316:"No any automation.
 
 	* Create a backup folder, usually named linkit-old
 	* Copy configs from dev to mobilink-1
 	* Check, configs have been changed since last deploy
 	* Make diffs, configure properly
-	* Separately on-by-one, run new binaries with new configs, checking them that ok (modules would fail : port is buzy)";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1489401934;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1489401934;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"C";s:2:"id";s:23:"deployment_instructions";s:4:"user";s:6:"helena";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";s:10:"sizechange";i:520;}}}
+	* Separately on-by-one, run new binaries with new configs, checking them that ok (modules would fail : port is buzy)";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1489401934;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";b:0;}}

@@ -8,7 +8,7 @@ AD Report
 
 * **ReportDate** - (unix timestamp) report time
 * **Campaign** - (int) campaign ID
-* **Provider** - (varchar127) Provider  
+* **Provider** - (int) Provider varchar (127) 
 * **Operator** - (int) Operator MCC MNC
 * **LpHits** - (int) All users which came on LP
 * **LpMsisdnHits** - (int) All users which came with MSISDN
