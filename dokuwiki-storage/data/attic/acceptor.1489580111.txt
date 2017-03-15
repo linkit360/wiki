@@ -9,7 +9,7 @@ AD Report
 
 |Column| Format |Description|
 |**ReportDate**|unix timestamp|Report time|
-| **Campaign**|int|Campaign ID|
+| **Campaign**|int|campaign ID|
 | **Provider**|varchar 127|Provider|
 | **Operator**|int|Operator MCC MNC|
 | **LpHits**|int|All users which came on LP|
