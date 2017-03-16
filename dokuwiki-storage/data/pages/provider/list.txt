@@ -1,0 +1,28 @@
+=== RU === 
+
+- Beeline
+
+=== PK === 
+
+- Mobilink 
+
+=== PH === 
+
+==== Yondu ==== 
+
+- Global Telecom
+
+
+=== TH === 
+
+==== Cheese ==== 
+
+- AIS
+- DTAC
+- TRUEH
+
+==== QRTech ==== 
+
+- AIS
+- DTAC
+- TRUEH
