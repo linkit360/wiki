@@ -23,8 +23,9 @@ Control Panel doesn't know anything about the provider's name for certain provid
 
 ### Previous AD report 
 
-<spoiler |We used o use crontab aggregate scripts saved data to the db>
+We used o use: 
 
+<spoiler |Crontab aggregate scripts saved data to the db>
 ```sql
 
 SELECT
