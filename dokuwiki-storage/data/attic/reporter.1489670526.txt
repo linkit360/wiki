@@ -1,4 +1,4 @@
-### Reporter 
+=== Reporter === 
 
 Collects all new data from the other platform services, aggregates them and sends to the admin interface via [[acceptor]] service.
 
@@ -21,7 +21,7 @@ acceptor_client:
 
 Control Panel doen't knows anythyng about the provider's name for certain provider instance 
 
-### Previous AD report 
+=== Previous AD report === 
 
 We used o use: 
 
@@ -96,7 +96,7 @@ FROM (
 
 ```
 
-### Now AD report 
+=== Now AD report === 
 
 Now, we create the following aggregate format:
 
