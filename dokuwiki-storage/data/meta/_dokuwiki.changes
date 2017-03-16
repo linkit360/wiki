@@ -74,3 +74,5 @@
 1489585362	87.249.6.34	E	acceptor	helena	[Queues] 		24
 1489593470	87.249.6.34	E	acceptor	helena			147
 1489656196	87.249.6.34	E	start	helena	[Services] 		55
+1489656317	87.249.6.34	C	reporter	helena	created		151
+1489656365	87.249.6.34	E	acceptor	helena	[Ports] 		15
