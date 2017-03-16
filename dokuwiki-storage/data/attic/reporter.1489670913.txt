@@ -19,7 +19,7 @@ acceptor_client:
 
 ```provider: cheese``` -- here we set up the provider name for data collection.
 
-Control Panel doesn't know anything about the provider's name for certain provider instance 
+Control Panel doen't knows anythyng about the provider's name for certain provider instance 
 
 ### Previous AD report 
 
