@@ -16,18 +16,6 @@
 
 ### Testing
 
-There is a URL that generates uniq pixel for abonents. Url might be like this one:
-* http://celeryleek.com/06m03/W5tP/VZ9f/DdMKG6HD8ufEloBvYv7iVD96rTTP9ciZa9qVYVUVlG8T0XfuftqC?X5I=DL_64730
-
-Such kind of url's you could get from Heru. 
-
-Eka may check the pixel.
-
-Suwat may send the real MO.
-
-Fajar is the developer of the pixel platform and we could get some information if they haven't receive pixel.
-
-
 Pixel smaples:
 
 * Mobusi a. sample = 5432104769mb85528554321 b. length = 23 character c. 
