@@ -1,0 +1,25 @@
+# 
+## Study Learn
+
+* HTTP 2
+* gRPC
+* https://habrahabr.ru/company/avito/blog/322384/ AvitoTech
+* https://www.slideshare.net/AvitoTech/zenhotels HTTP2 QUIC
+* Kubernetes https://www.meetup.com/Moscow-Kubernetes-Meetup/events/238321060/ 
+* ML https://habrahabr.ru/post/322188/
+* Analitycs Edge https://www.edx.org/course/analytics-edge-mitx-15-071x-2
+* Redis Pub/Sub events 
+
+
+### Some other links
+
+* https://github.com/golang/go/wiki/Projects
+
+* https://awesome.re/
+
+* http://www.mjhall.org/golang-data-science-libraries/
+* https://www.reddit.com/r/golang/comments/1l7jkg/how_is_go_for_data_science/
+* https://github.com/golang/go/wiki/Projects
+* http://go-search.org/
+* https://github.com/gonum
+* https://www.analyticsvidhya.com/blog/2016/05/19-data-science-tools-for-people-dont-understand-coding/
