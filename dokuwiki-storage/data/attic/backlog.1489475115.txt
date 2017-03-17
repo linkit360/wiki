@@ -7,7 +7,7 @@
 * Kubernetes
 * ML https://habrahabr.ru/post/322188/
 * Analitycs Edge https://www.edx.org/course/analytics-edge-mitx-15-071x-2
-* Redis Pub/Sub events 
+* Redis Push events 
 
 
 ## Technical usability 
