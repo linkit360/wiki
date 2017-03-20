@@ -23,4 +23,4 @@
 * http://go-search.org/
 * https://github.com/gonum
 * https://www.analyticsvidhya.com/blog/2016/05/19-data-science-tools-for-people-dont-understand-coding/
-* https://habrahabr.ru/company/edison/blog/283262/ (http://paulgraham.com/road.html)
+* https://habrahabr.ru/company/edison/blog/283262/
