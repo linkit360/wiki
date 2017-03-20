@@ -10,10 +10,8 @@ Get Info by user id
 
 * https://chatbotsmagazine.com/fb-messenger-bot-how-to-identify-a-user-via-page-app-scoped-user-ids-f95b807b7e46#.56qrrfms6
 
+SI for HR bot
 
-### SI for HR bot
-
-* https://habrahabr.ru/post/314876/
 * https://habrahabr.ru/company/inoventica/blog/322292/
 * https://habrahabr.ru/post/322602/ 
 * Selling the invisible - some useful ideas 
