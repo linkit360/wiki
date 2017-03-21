@@ -1,45 +1,3 @@
-1489397102	87.249.6.34	C	start	helena	created		1594
-1489397178	87.249.6.34	E	start	helena	[[[From idea to realization|From-idea-to-realization]]] 		8
-1489401657	87.249.6.34	E	start	helena	[Connect Calendar] 		44
-1489401841	87.249.6.34	C	backlog	helena	created		1580
-1489401901	87.249.6.34	E	start	helena	[Workflow] 		-18
-1489401934	87.249.6.34	C	deployment_instructions	helena	created		520
-1489402668	87.249.6.34	C	inject_tools	helena	created		2559
-1489402729	87.249.6.34	C	dba_tools	helena	created		151
-1489403466	87.249.6.34	C	monitoring	helena	created		3382
-1489403606	87.249.6.34	E	monitoring	helena			9
-1489403685	87.249.6.34	C	statistics_and_analytics	helena	created		3234
-1489403732	87.249.6.34	C	contentd	helena	created		324
-1489403908	87.249.6.34	C	dispatcherd	helena	created		1508
-1489404770	87.249.6.34	E	wiki:welcome	helena			-1618
-1489412200	87.249.6.34	E	start	helena	[Wiki] 		1
-1489420355	87.249.6.34	E	start	helena	[Services] 		-42
-1489420454	87.249.6.34	C	mt_manager	helena	created		525
-1489420577	87.249.6.34	C	pixels	helena	created		4073
-1489421730	87.249.6.34	C	q-listener	helena	created		342
-1489421832	87.249.6.34	C	rpc_inmemory	helena	created		373
-1489431034	83.167.122.116	C	mobilink	helena	created		864
-1489432342	83.167.122.116	E	mobilink	helena	[Scheme] 		-70
-1489432568	83.167.122.116	C	yondu	helena	created		4221
-1489432673	83.167.122.116	C	cheese	helena	created		637
-1489432743	83.167.122.116	C	qrtech	helena	created		1480
-1489432801	83.167.122.116	E	qrtech	helena	[Scheme] 		28
-1489432876	83.167.122.116	C	beeline	helena	created		39
-1489432938	83.167.122.116	E	start	helena	[Ideas] 		-66
-1489432982	83.167.122.116	C	bot	helena	created		768
-1489433068	83.167.122.116	E	start	helena			15
-1489433085	83.167.122.116	C	glossary	helena	created		245
-1489433234	83.167.122.116	E	start	helena	[Workflow] 		27
-1489433247	83.167.122.116	C	new_country_instance	helena	created		345
-1489475115	127.0.0.1	E	start		external edit		0
-1489475465	87.249.6.34	E	start	helena	[Wiki] 		68
-1489475768	87.249.6.34	C	sidebar	helena	created		14
-1489475888	87.249.6.34	D	sidebar	helena	removed		-14
-1489476222	87.249.6.34	C	sidebar	helena	created		2
-1489476496	87.249.6.34	D	sidebar	helena	removed		-2
-1489476652	87.249.6.34	C	sidebar	helena	created		26
-1489476753	87.249.6.34	D	sidebar	helena	removed		-26
-1489476828	87.249.6.34	C	sidebar	helena	created		18
 1489477620	87.249.6.34	E	sidebar	helena			70
 1489477669	87.249.6.34	E	sidebar	helena			-1
 1489478133	87.249.6.34	E	sidebar	helena			-7
@@ -77,7 +35,6 @@
 1489656317	87.249.6.34	C	reporter	helena	created		151
 1489656365	87.249.6.34	E	acceptor	helena	[Ports] 		15
 1489656618	87.249.6.34	E	reporter	helena			383
-1489475115	127.0.0.1	E	rpc_inmemory		external edit		0
 1489656678	87.249.6.34	E	rpc_inmemory	helena	[Ports] 		1
 1489657118	87.249.6.34	E	rpc_inmemory	helena	[Tables] 		546
 1489657251	87.249.6.34	E	rpc_inmemory	helena	[Tables] 		131
@@ -96,14 +53,11 @@
 1489673266	87.249.6.34	E	reporter	helena	[Now AD report] 		254
 1489673651	87.249.6.34	E	reporter	helena	[Reporter] 		191
 1489674204	87.249.6.34	E	reporter	helena			-28
-1489475115	127.0.0.1	E	backlog		external edit		0
 1489743041	87.249.6.34	E	backlog	helena	[Study Learn] 		3
 1489743278	87.249.6.34	E	start	helena	[Workflow] 		29
 1489743414	87.249.6.34	C	studylearn:golang	helena	created		797
 1489743422	87.249.6.34	E	backlog	helena	[Study Learn] 		-302
-1489475115	127.0.0.1	E	pixels		external edit		0
 1489759786	87.249.6.34	E	pixels	helena	[Testing] 		403
-1489475115	127.0.0.1	E	bot		external edit		0
 1489998651	87.249.6.34	E	bot	helena			41
 1489999437	87.249.6.34	E	studylearn:golang	helena	[Some other links] 		51
 1489999478	87.249.6.34	E	studylearn:golang	helena	[Some other links] 		34
