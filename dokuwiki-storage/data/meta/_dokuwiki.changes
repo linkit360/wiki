@@ -1,29 +1,3 @@
-1489579579	87.249.6.34	E	acceptor	helena	[Queues] 		17
-1489579668	87.249.6.34	E	acceptor	helena	[Queues] 		-6
-1489580048	87.249.6.34	E	acceptor	caravus			524
-1489580111	87.249.6.34	E	acceptor	caravus			-525
-1489580137	87.249.6.34	E	acceptor	caravus			0
-1489585362	87.249.6.34	E	acceptor	helena	[Queues] 		24
-1489593470	87.249.6.34	E	acceptor	helena			147
-1489656196	87.249.6.34	E	start	helena	[Services] 		55
-1489656317	87.249.6.34	C	reporter	helena	created		151
-1489656365	87.249.6.34	E	acceptor	helena	[Ports] 		15
-1489656618	87.249.6.34	E	reporter	helena			383
-1489656678	87.249.6.34	E	rpc_inmemory	helena	[Ports] 		1
-1489657118	87.249.6.34	E	rpc_inmemory	helena	[Tables] 		546
-1489657251	87.249.6.34	E	rpc_inmemory	helena	[Tables] 		131
-1489657617	87.249.6.34	E	start	helena	[Wiki] 		0
-1489661961	87.249.6.34	E	start	helena	[Services] 		34
-1489662083	87.249.6.34	C	provider:list	helena	created		162
-1489662125	87.249.6.34	E	provider:list	helena			32
-1489670237	87.249.6.34	E	reporter	helena			2391
-1489670526	87.249.6.34	E	reporter	helena			710
-1489670621	87.249.6.34	E	reporter	helena			-12
-1489670913	87.249.6.34	E	reporter	helena	[Now AD report] 		398
-1489670995	87.249.6.34	E	reporter	helena	[Reporter] 		0
-1489671474	87.249.6.34	E	reporter	helena	[Previous AD report] 		69
-1489671510	87.249.6.34	E	reporter	helena	[Previous AD report] 		-2
-1489672116	87.249.6.34	E	reporter	helena			-4
 1489673266	87.249.6.34	E	reporter	helena	[Now AD report] 		254
 1489673651	87.249.6.34	E	reporter	helena	[Reporter] 		191
 1489674204	87.249.6.34	E	reporter	helena			-28
