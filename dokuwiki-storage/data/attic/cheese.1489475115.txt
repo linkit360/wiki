@@ -1,6 +1,3 @@
-### Scheme 
-{{undefined:cheese.png}}
-
 ### System
 
 * DB: linkit_cheese:linkit-prod.ceta2yrq1zco.ap-southeast-1.rds.amazonaws.com
