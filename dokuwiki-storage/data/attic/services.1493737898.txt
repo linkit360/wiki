@@ -1,0 +1,17 @@
+Table: xmp_services
+
+^ Column ^ Destiny ^
+|```status``` | 1 - active, 0 - inactive |
+|```price``` | in bare currency (need to multiply on 100) |
+|```sms_on_subscribe``` | subscribe sms text template |
+|```sms_on_content``` | content sms template |
+|```sms_on_unsubscribe``` | unsubscribe sms template |
+|```paid_hours``` | rejected rule hours| 
+|```delay_hours``` | if we make retries, time in hours between unsuccessful charges |
+|```retry_days``` | how long to keep records in retries, or how long to tarifficate periodic subscription |
+|```inactive_days``` | if abonent cann't pay for inactive days in a row, make him/her inactive (remove from charge) |
+|```grace_days``` | on failed charge request deactivate in this period |
+|```minimal_touch_times``` | if a content was downloaded less than minimal_touch_times, inactivate |
+|```days``` | for periodic subscriptions: a day, when to send the content |
+|```allowed_from``` | for periodic subscriptions: time in minute to send the content |
+|```allowed_to``` | for periodic subscriptions: a day, when to stop content sending |
