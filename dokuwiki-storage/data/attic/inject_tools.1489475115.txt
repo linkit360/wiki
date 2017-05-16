@@ -52,7 +52,7 @@ xmp_jobs types:
 # Sources
 
 * from file (external source) - files in /var/www/xmp.linkit360.ru/web/injections
-* from ```xmp_retries_expired```
+* from xmp_retries_expired
 
 # Table 
 
