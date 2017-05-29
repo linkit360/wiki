@@ -1,0 +1,20 @@
+### Control Panel Deployment Environment
+
+##### Production env
+
+- 1 EC2 instance | Singapore region | To Do
+- 1 RDS instance | Singapore region | To Do
+
+
+##### Testing stage env
+
+- 1 EC2 instance. Singapore region | 
+- 1 RDS instance | Frankfurt region | db.t2.micro [linkit-prod.ceta2yrq1zco.ap-southeast-1.rds.amazonaws.com:5432 | PostgreSQL 9.6.1 | Storage 100 GB]
+
+
+##### Sandbox env
+
+- 1 EC2 instance | Frankfurt region | db.t2.micro
+- 1 RDS instance | Frankfurt region | db.t2.micro [linkit.cz3twmoynbq5.eu-central-1.rds.amazonaws.com:5432 | PostgreSQL 9.4.7 | Storage 10 GB]
+
+###### To define 
