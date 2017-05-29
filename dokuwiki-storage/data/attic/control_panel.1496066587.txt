@@ -1,0 +1,8 @@
+### Control Panel Deployment Environment
+
+## 111
+
+# 111
+
+- Monday demo: demonstration and check what we have deployed and implemented. 13-14:00
+- Everyday standups at 17-00 - no more than 10 min, what
