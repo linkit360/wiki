@@ -3,7 +3,7 @@
 ##### Production env
 
 - 1 EC2 instance | Singapore region | To Do
-- 1 RDS instance | Singapore region [ db.t2.micro | cp-prod-1.ceta2yrq1zco.ap-southeast-1.rds.amazonaws.com:5432 | PostgreSQL 9.6.1 | Storage 100 GB]
+- 1 RDS instance | Singapore region [ db.t2.micro | in progress | PostgreSQL 9.6.1 | Storage 100 GB]
 
 
 
