@@ -74,11 +74,11 @@ Runs on monitoring host
 
 ### Services Description:
 
-1. [[mobilink-sd | Mobilink]]
-2. [[cheese-sd | Cheese]]
-3. [[qrtech-sd | QRTech]]
-4. [[beeline-sd | Beeline]]
-5. [[yondu-sd | Yondu]]
+1. [[Mobilink]]
+2. [[Cheese]]
+3. [[QRTech]]
+4. [[Beeline]]
+5. [[Yondu]]
 
 
 ### Ideas and bot
