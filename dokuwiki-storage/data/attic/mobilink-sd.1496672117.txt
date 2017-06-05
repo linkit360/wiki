@@ -1,0 +1,4 @@
+### System
+
+* DB: linkit_mobilink:linkit-mobilink.cb2q7f7mvbwr.ap-south-1.rds.amazonaws.com
+* RabbitMQ: localhost
