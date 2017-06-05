@@ -16,7 +16,7 @@
 * 1. User hit LP
 * 2. Vostok redirects user to the Telco confirmation page. (AK on/off)
 * 3. User subscribed
-* 4. QR tech sends DN callback to Vostok on the subscription MO fact (if user subscribed)
+* 4. QR tech sends dn callback to Vostok on the subscription MO fact (if user subscribed)
 * 5. Vostok on the daily basis sends MT to QR Tech to renewal subscription. (8:00 AM GMT+7)
 
 
