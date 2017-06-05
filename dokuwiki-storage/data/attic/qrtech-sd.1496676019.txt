@@ -27,9 +27,7 @@
 * 421924701 - Paparazzi Video
 * 4219246   - Funny
 
-#### Service Code SubPacks
-
-* QR Tech allocated 01-10 subpacks for Vostok integration (i.e. service code + subpack (last 2 digits of service code). example: 421925003)
+To clarify "postpacks"
 
 #### Campaign Examples
 

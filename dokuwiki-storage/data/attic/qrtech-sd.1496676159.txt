@@ -29,7 +29,7 @@
 
 #### Service Code SubPacks
 
-* QR Tech allocated 01-10 subpacks for Vostok integration (i.e. service code + subpack (last 2 digits of service code). example: 421925003)
+* QR Tech allocated 01-10 subpacks for Vostok integration
 
 #### Campaign Examples
 
