@@ -22,7 +22,7 @@
 
 ####Services in use
 
-* 421925001 - Gamoy (traffic online)
+* 421925001 - Gamoy
 * 777       - service for u/get
 * 421924701 - Paparazzi Video
 * 4219246   - Funny (not in usage)
