@@ -37,21 +37,23 @@
 
 * http://localhost:50326/metrics
 
+### Locations 
+
+* /metrics
+* /qr/mt/failed       
+* /qr/mt/ok       
+* /api/mo      
+* /api/dn
 
 ### Queues 
 
 #### out
 
-
- * qrtech_mt
-
- * qrtech_mo
-
- * transaction_log
-
- * pixels
-
- * mt_manager
+* qrtech_mt
+* qrtech_mo
+* transaction_log
+* pixels
+* mt_manager
 
 ### Tables
 

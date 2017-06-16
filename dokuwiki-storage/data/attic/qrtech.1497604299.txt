@@ -37,6 +37,13 @@
 
 * http://localhost:50326/metrics
 
+### Locations 
+
+* /metrics
+* /qr/mt/failed       
+* /qr/mt/ok       
+* /api/mo      
+* /api/dn
 
 ### Queues 
 
