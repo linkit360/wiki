@@ -4,6 +4,16 @@
 
 * make packages as interfaces, add internal tests and integration tests
 
+### Prepare for Zong
+
+Use RabbitMQ and add 'pending' status, when record currently is in rabbit mq queue
+Steps:
+* select records from database
+* mark selected records as pending
+* send them into queue
+* read from queue, check them, get response from operator, update status (not pending: paid or failed), write subscription status and transaction log, process retries
+* in case of any error, return to queue
+* create API method
 
 ## Filter content by OS
 

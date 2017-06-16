@@ -1,0 +1,7 @@
+### Partitioning
+
+* https://github.com/vostrok/db/tree/master/partitioning
+
+### MySQL in Badoo 
+
+* https://www.slideshare.net/profyclub_ru/mysql-badoo
