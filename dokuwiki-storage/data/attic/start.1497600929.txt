@@ -1,5 +1,10 @@
 
 
+### Version
+
+* Tag version v1.6 is save for mobilink
+* Tag version v1.7.7 is save for Yondu (unsubscribe, content unique urls)
+* Tag version v1.7;7 is save for cheese.
 
 ### Wiki 
 
