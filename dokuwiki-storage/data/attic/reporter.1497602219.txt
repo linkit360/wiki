@@ -1,0 +1,145 @@
+### Reporter 
+
+Collects all new data from the other platform services, aggregates them and sends to the admin interface via [[acceptor]] service.
+
+=== Neighbours === 
+
+* qlistener - pixel transactions, mo/retry transactions, access campaigns 
+* mt_manager - new MO (for all, cheese, mobilink, qrtech, yondu).
+
+=== Configuration === 
+
+```yaml
+app_name: reporter
+server:
+  rpc_port: 50315
+  http_port: 50316
+collector:
+  provider: cheese
+db:
+  ..simple db config as everywhere
+acceptor_client:
+  ..simple rpc client 
+```
+
+```provider: cheese``` -- here we set up the provider name for data collection.
+
+Control Panel doesn't know anything about the provider's name for certain provider instance 
+
+### Previous AD report 
+
+<spoiler |We used o use crontab aggregate scripts saved data to the db>
+
+```sql
+
+SELECT
+  :day           AS report_date,
+  t1.id_campaign AS id_campaign,
+  t1.count       AS total_lp_hits,
+  t2.count       AS total_lp_msisdn_hits,
+  t3.count       AS total_mo,
+  t4.count       AS total_mo_uniq,
+  t5.count       AS total_mo_success_charge,
+  t6.count       AS total_pixels_sent
+FROM (
+    (
+      SELECT
+        id_campaign,
+        count(*) AS count
+      FROM xmp_campaigns_access
+      WHERE
+        to_char(sent_at, 'YYYY-MM-DD') = :day
+      GROUP BY id_campaign
+    ) t1
+    LEFT JOIN (
+                SELECT
+                  id_campaign,
+                  count(*) AS count
+                FROM xmp_campaigns_access
+                WHERE msisdn != ''
+                      AND to_char(sent_at, 'YYYY-MM-DD') = :day
+                GROUP BY id_campaign
+              ) t2 ON t1.id_campaign = t2.id_campaign
+    LEFT JOIN (
+                SELECT
+                  id_campaign,
+                  count(*) AS count
+                FROM xmp_subscriptions
+                WHERE to_char(created_at, 'YYYY-MM-DD') = :day
+                      AND result IN ('failed', 'paid', '')
+                GROUP BY id_campaign
+              ) t3 ON t1.id_campaign = t3.id_campaign
+    LEFT JOIN (
+                SELECT
+                  id_campaign,
+                  count(DISTINCT (msisdn)) AS count
+                FROM xmp_subscriptions
+                WHERE to_char(created_at, 'YYYY-MM-DD') = :day
+                      AND result IN ('failed', 'paid', '')
+                GROUP BY id_campaign
+              ) t4 ON t1.id_campaign = t4.id_campaign
+    LEFT JOIN (
+                SELECT
+                  s.id_campaign   AS id_campaign,
+                  count(s.msisdn) AS count
+                FROM xmp_subscriptions s
+                  JOIN xmp_transactions t ON s.id = t.id_subscription
+                WHERE to_char(s.created_at, 'YYYY-MM-DD') = :day
+                      AND s.result IN ('failed', 'paid')
+                      AND t.result = 'paid'
+                GROUP BY s.id_campaign
+              ) t5 ON t1.id_campaign = t5.id_campaign
+    LEFT JOIN (
+                SELECT
+                  id_campaign,
+                  count(*) AS count
+                FROM xmp_pixel_transactions
+                WHERE to_char(created_at, 'YYYY-MM-DD') = :day
+                GROUP BY id_campaign
+              ) t6 ON t1.id_campaign = t6.id_campaign
+)
+
+```
+</spoiler>
+
+### Now AD report 
+
+Now, we have a special service so called `Reporter` that collects data and aggregates it, per second.
+Each second we send the data to the acceptor on the XMP side.
+
+Reporter report for AD has the following aggregate format:
+
+```go
+type Aggregate struct {
+	ReportDate   int64  `json:"report_date,omitempty"`
+	CampaignId   int64  `json:"id_campaign,omitempty"`
+	Provider     string `json:"id_provider,omitempty"`
+	OperatorCode int64  `json:"operator_code,omitempty"`
+	LPHits       int64  `json:"lp_hits,omitempty"`
+	LPMsisdnHits int64  `json:"lp_msisdn_hits,omitempty"`
+	Mo           int64  `json:"mo,omitempty"`
+	MoUniq       int64  `json:"mo_uniq,omitempty"`
+	MoSuccess    int64  `json:"mo_success,omitempty"`
+	RetrySuccess int64  `json:"retry_success,omitempty"`
+	Pixels       int64  `json:"pixels_sent,omitempty"`
+}
+```
+
+* MO: new subscription
+* MOuniq: MO uniq msisdns count
+* MOSuccess: writeTransaction event, "paid" status 
+* RetrySuccess:  writeTransaction event, "retry_paid" status 
+NB: skipped statuses: expired_paid, injection_paid.
+* Pixels: pixelTransaction event
+
+
+Added: 
+
+* id_provider (aka partner): cheese, qrtech, yondu, mobilink, etc 
+* operator_code
+* retry charge 
+
+Differences:
+
+*  mo_charge is count of **paid** new MO
+* retry charge is count of **paid** retries 

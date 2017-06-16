@@ -1,0 +1,24 @@
+### Ports
+
+* 50313 (tcp)
+* 50314 (http)
+
+### Queues
+
+AD Report
+
+
+|Column Go| Column name | Format |Description|
+|**ReportAt**|`report_at`|unix timestamp|Report time|
+| **CampaignId**|`id_campaign`|bigint|Campaign ID|
+| **ProviderName**|`provider_name`|varchar 127|Provider|
+| **OperatorCode**|`operator_code`|bigint|Operator MCC MNC|
+| **LpHits**|`lp_hits`|bigint|All users which came on LP|
+| **LpMsisdnHits**|`lp_msisdn_hits`|bigint|All users which came with MSISDN|
+| **Mo**|`mo`|bigint|All the valid purchase transactions|
+| **MoUniq**|`mo_uniq`|bigint|Unique purchase transactions|
+| **MoSuccess**|`mo_success`|bigint|All the success purchase transactions|
+| **RetrySuccess**|`retry_success`|bigint|retry success|
+| **Pixels**|`pixels`|bigint|Total count of pixels has been sent|
+
+Group by ` Provider > Operator > Campaign > ReportDate `

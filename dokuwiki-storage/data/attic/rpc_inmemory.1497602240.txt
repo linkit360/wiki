@@ -1,0 +1,57 @@
+### Ports
+
+* rpc 50307
+* http 50308
+
+### Metrics
+
+* http://localhost:50308/metrics
+
+### Tables
+
+The usual is to get the configuration from the database.  Actual tables you can find here: http://localhost:50308/tables
+
+The list of tables with platfrom access rules. ro rule means the table should be in the control panel, not in the provider instance. 
+
+| **Table Name** | **Platform Access** | 
+| `campaigns` | ro| 
+| `service` | ro | 
+| `service_content` | ro |
+| `content` | ro | 
+| `content_sent` | rw | 
+| `operator_ip` | ro|
+| `operator` |ro|
+| `countries` | ro | 
+| `operator_msisdn_prefix`  | ro | 
+| `msisdn_blacklist` | rw| 
+| `msisdn_postpaid` | rw|
+| `pixel_setting` | ro| 
+| `publishers` | ro |
+| `keyword` | ro | 
+| `content_unique_urls` | rw | 
+| `partners` | ro | 
+| `destinations`  | ro | 
+| `destinations_hits` | rw| 
+
+
+### Locations 
+
+* /tables
+* /metrics
+* /cqr?t=[tables]
+
+### Queues 
+#### In
+#### Out
+
+### CQR
+
+* /cqr?t=**[tables]**
+
+### TODO: HTTP API method: info on msisdn
+
+Response: 
+
+* country
+* operator code
+* operator name

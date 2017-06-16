@@ -1,20 +1,3 @@
-1496672461	87.249.6.34	C	qrtech-sd	kirill	created		46
-1496672483	87.249.6.34	C	beeline-sd	kirill	created		47
-1496672510	87.249.6.34	C	yondu-sd	kirill	created		44
-1496672565	87.249.6.34	E	cheese-sd	kirill			1
-1496672570	87.249.6.34	E	qrtech-sd	kirill			1
-1496672575	87.249.6.34	E	mobilink-sd	kirill			1
-1496673841	87.249.6.34	E	cheese-sd	kirill			310
-1496673861	87.249.6.34	E	cheese-sd	kirill			16
-1496674350	87.249.6.34	E	cheese-sd	kirill			109
-1496674980	87.249.6.34	E	qrtech-sd	kirill			619
-1496675003	87.249.6.34	E	cheese-sd	kirill			5
-1496675222	87.249.6.34	E	qrtech-sd	kirill			76
-1496675368	87.249.6.34	E	qrtech-sd	kirill			0
-1496675973	87.249.6.34	E	qrtech-sd	kirill			208
-1496676019	87.249.6.34	E	qrtech-sd	kirill			95
-1496676159	87.249.6.34	E	qrtech-sd	kirill			63
-1496676246	87.249.6.34	E	qrtech-sd	kirill			82
 1496676385	87.249.6.34	E	cheese-sd	kirill			249
 1496677555	87.249.6.34	E	mobilink-sd	kirill			1128
 1496677575	87.249.6.34	E	mobilink-sd	kirill			1049
@@ -28,12 +11,16 @@
 1497601721	87.249.6.34	E	start	helena	[Wiki] 		-366
 1497601860	87.249.6.34	E	backlog	helena	[Technical usability] 		-97
 1497601871	87.249.6.34	E	backlog	helena	[Prepare for Zong] 		-428
-1489475115	127.0.0.1	E	deployment_instructions		external edit		0
 1497601908	87.249.6.34	D	deployment_instructions	helena	removed		-520
-1489475115	127.0.0.1	E	dba_tools		external edit		0
 1497602009	87.249.6.34	D	dba_tools	helena	removed		-151
-1489475115	127.0.0.1	E	new_country_instance		external edit		0
 1497602030	87.249.6.34	D	new_country_instance	helena	removed		-345
 1497602038	87.249.6.34	E	ideas	helena			146
 1497602057	87.249.6.34	E	start	helena	[Workflow] 		-107
 1497602071	87.249.6.34	E	start	helena	[Scheme] 		-45
+1497602197	87.249.6.34	D	acceptor	helena	removed		-842
+1497602219	87.249.6.34	D	reporter	helena	removed		-4501
+1497602240	87.249.6.34	D	rpc_inmemory	helena	removed		-1051
+1497602251	87.249.6.34	E	start	helena	[Services] 		-125
+1497602314	87.249.6.34	E	start	helena	[Workflow] 		-6
+1497602322	87.249.6.34	E	start	helena	[[[Backlog|Backlog]]] 		-1
+1497602359	87.249.6.34	E	start	helena			-7
