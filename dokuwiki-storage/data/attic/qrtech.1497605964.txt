@@ -5,8 +5,7 @@
 
 #### API MO call
 curl -v -X POST --data "motoken=qny6qv3sfqhkixjcpe&msgid=_msgid123&msisdn=66819197088&message=P1&shortcode=421925001&&productid=&operator=1&keyword=P1"  "http://platform.th.linkit360.ru/qrtechapi/mo"
-* found service and campaign 
-* sent in queue 
+
 
 
 #### API DN call

@@ -1,18 +1,11 @@
-a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1489432743;s:8:"modified";i:1497604319;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1497604319;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"E";s:2:"id";s:6:"qrtech";s:4:"user";s:6:"helena";s:3:"sum";s:12:"[Locations] ";s:5:"extra";s:0:"";s:10:"sizechange";i:-95;}s:11:"contributor";a:1:{s:6:"helena";s:14:"Helen Nevskaya";}s:5:"title";s:6:"Scheme";s:11:"description";a:2:{s:15:"tableofcontents";a:9:{i:0;a:4:{s:3:"hid";s:6:"scheme";s:5:"title";s:6:"Scheme";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:1;a:4:{s:3:"hid";s:2:"lp";s:5:"title";s:2:"LP";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:5:"about";s:5:"title";s:5:"About";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:6:"system";s:5:"title";s:6:"System";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:5:"ports";s:5:"title";s:5:"Ports";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:7:"metrics";s:5:"title";s:7:"Metrics";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:6;a:4:{s:3:"hid";s:6:"queues";s:5:"title";s:6:"Queues";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:6:"tables";s:5:"title";s:6:"Tables";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:8;a:4:{s:3:"hid";s:7:"backlog";s:5:"title";s:7:"Backlog";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:466:"Scheme
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1489432743;s:8:"modified";i:1497605980;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1497605980;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"E";s:2:"id";s:6:"qrtech";s:4:"user";s:6:"helena";s:3:"sum";s:12:"[Test Flow] ";s:5:"extra";s:0:"";s:10:"sizechange";i:46;}s:11:"contributor";a:1:{s:6:"helena";s:14:"Helen Nevskaya";}s:5:"title";s:9:"Test Flow";s:11:"description";a:2:{s:15:"tableofcontents";a:10:{i:0;a:4:{s:3:"hid";s:9:"test_flow";s:5:"title";s:9:"Test Flow";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:1;a:4:{s:3:"hid";s:6:"scheme";s:5:"title";s:6:"Scheme";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:2:"lp";s:5:"title";s:2:"LP";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:5:"about";s:5:"title";s:5:"About";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:6:"system";s:5:"title";s:6:"System";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:5:"ports";s:5:"title";s:5:"Ports";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:6;a:4:{s:3:"hid";s:7:"metrics";s:5:"title";s:7:"Metrics";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:6:"queues";s:5:"title";s:6:"Queues";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:8;a:4:{s:3:"hid";s:6:"tables";s:5:"title";s:6:"Tables";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:9;a:4:{s:3:"hid";s:7:"backlog";s:5:"title";s:7:"Backlog";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:302:"Test Flow
 
- 
+Landing
 
-LP
+API MO call
 
-	* <http://platform.th.linkit360.ru/qrlp/mobilink-p2?msisdn=928777777777&aff_sub=5432104769mb85528554321>
-	* url is passed on the html in  variable
+curl -v -X POST --data “motoken=qny6qv3sfqhkixjcpe&msgid=_msgid123&msisdn=66819197088&message=P1&shortcode=421925001&&productid=&operator=1&keyword=P1”  “<http://platform.th.linkit360.ru/qrtechapi/mo>”
+* found service and campaign 
+* sent in queue 
 
-About
-
-	* Q: we just need to monitor DN?
-	* A: yes
-
-	* Q: in what period ?
-	* A: 8AM ( First BC) 12PM 2:30PM 4:30PM 6:30PM 8:30PM 10:30PM
-
-	* Q: what if you do not receive MT with content at least once (the content sent in MT), as in lets say the end didnt send us the content for 18/2/2017 broadcast??";}s:8:"relation";a:2:{s:5:"media";a:2:{s:20:"undefined:qrtech.png";b:1;s:3:"url";b:0;}s:10:"firstimage";s:20:"undefined:qrtech.png";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1489432743;s:8:"modified";i:1497604319;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1497604319;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"E";s:2:"id";s:6:"qrtech";s:4:"user";s:6:"helena";s:3:"sum";s:12:"[Locations] ";s:5:"extra";s:0:"";s:10:"sizechange";i:-95;}s:11:"contributor";a:1:{s:6:"helena";s:14:"Helen Nevskaya";}}}
+API DN call";}s:8:"relation";a:2:{s:5:"media";a:2:{s:20:"undefined:qrtech.png";b:1;s:3:"url";b:0;}s:10:"firstimage";s:20:"undefined:qrtech.png";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1489432743;s:8:"modified";i:1497605980;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1497605980;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"E";s:2:"id";s:6:"qrtech";s:4:"user";s:6:"helena";s:3:"sum";s:12:"[Test Flow] ";s:5:"extra";s:0:"";s:10:"sizechange";i:46;}s:11:"contributor";a:1:{s:6:"helena";s:14:"Helen Nevskaya";}}}
