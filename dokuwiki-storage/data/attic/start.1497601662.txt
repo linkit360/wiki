@@ -1,6 +1,18 @@
 
 
 
+### Wiki 
+
+Runs on monitoring host
+
+* docker run -d -p 8888:80 --name dokuwiki istepanov/dokuwiki:2.0
+* docker exec  -it 4103730f58ad sh
+* files are in cd /var/dokuwiki-storage/ 
+* taken from here https://hub.docker.com/r/istepanov/dokuwiki 
+* Copy files:  docker cp foo.txt mycontainer:/foo.txt
+* upgrade: backup /var/dokuwiki-storage, repeat steps in Dockerfile
+
+
 
 ### Workflow
 
