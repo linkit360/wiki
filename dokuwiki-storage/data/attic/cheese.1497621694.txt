@@ -5,7 +5,7 @@
 * curl -L "http://platform.th.linkit360.ru/lp/cheese_1?msisdn=928777777777&aff_sub=5432104769mb85528554322"
 * * check pixel added in xmp_pixel_buffer
 
-http://platform.th.linkit360.ru/lp/cheese_1?aff_sub=5432104769mb85528554322
+http://platform.th.linkit360.ru/lp/cheese_1/msisdn=928777777777&aff_sub=5432104769mb85528554322
 
 ### Scheme 
 {{undefined:cheese.png}}
