@@ -1,19 +1,3 @@
-1497515849	87.249.6.34	E	qrtech-sd	kirill			15
-1497515932	87.249.6.34	E	qrtech-sd	kirill			17
-1497600929	87.249.6.34	E	start	helena	[Connect Calendar] 		-240
-1497600939	87.249.6.34	E	start	helena	[Version] 		-168
-1497601662	87.249.6.34	E	start	helena	[Ideas and bot] 		4
-1497601677	87.249.6.34	C	ideas	helena	created		907
-1497601682	87.249.6.34	D	bot	helena	removed		-907
-1497601721	87.249.6.34	E	start	helena	[Wiki] 		-366
-1497601860	87.249.6.34	E	backlog	helena	[Technical usability] 		-97
-1497601871	87.249.6.34	E	backlog	helena	[Prepare for Zong] 		-428
-1497601908	87.249.6.34	D	deployment_instructions	helena	removed		-520
-1497602009	87.249.6.34	D	dba_tools	helena	removed		-151
-1497602030	87.249.6.34	D	new_country_instance	helena	removed		-345
-1497602038	87.249.6.34	E	ideas	helena			146
-1497602057	87.249.6.34	E	start	helena	[Workflow] 		-107
-1497602071	87.249.6.34	E	start	helena	[Scheme] 		-45
 1497602197	87.249.6.34	D	acceptor	helena	removed		-842
 1497602219	87.249.6.34	D	reporter	helena	removed		-4501
 1497602240	87.249.6.34	D	rpc_inmemory	helena	removed		-1051
@@ -33,5 +17,4 @@
 1497613253	87.249.6.34	E	qrtech	helena	[Test Flow] 		70
 1497621694	87.249.6.34	E	cheese	helena			102
 1497621724	87.249.6.34	E	cheese	helena	[Cheese] 		-20
-1489475115	127.0.0.1	E	mobilink		external edit		0
 1498031901	185.182.81.73	E	mobilink	helena	[Scheme] 		114
