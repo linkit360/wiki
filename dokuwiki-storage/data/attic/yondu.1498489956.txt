@@ -173,6 +173,11 @@ For testing/developing purposes:
 ### Queues 
 #### In
 
-* ```yondu_mt```
-* ```yondu_mo```
-* ```yondu_dn```
+* yondu_mo
+* yondu_callback
+
+#### out
+
+* yondu_consent
+* yondu_mt
+* yondu_charge 
