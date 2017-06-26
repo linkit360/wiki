@@ -91,7 +91,6 @@ Provide API handler, to re-send unsent pixels (filter them by date, limit)
 
 ### pixel_settings
 
-```
     CREATE TABLE public.xmp_pixel_settings (
         id SERIAL PRIMARY KEY ,
         id_campaign INT NOT NULL,
@@ -104,27 +103,29 @@ Provide API handler, to re-send unsent pixels (filter them by date, limit)
         ratio INT NOT NULL DEFAULT 2
     );
 
-```
-**```xmp_pixel_settings```** to be edited from Control Panel:
+
+**xmp_pixel_settings** to be edited from CMS:
 
 Here:
 
-* ```id``` - just id, not in use
-* ```id_campaign``` - campaign id from campaigns table
-* ```publisher``` - publisher name, alias, etc.
-* ```endpoint``` - url where to send GET request in format: http://wap.singiku.com/pass/jojokucpaga.php?aff_sub=%pixel% 
-* ```timeout``` - how many seconds wait for
-* ```ratio``` - the sequence number to be sent. For example, 
+* id - just id, not in use
+* id_campaign - campaign id from campaigns table
+* publisher - publisher name, alias, etc.
+* endpoint - url where to send GET request in format: http://wap.singiku.com/pass/jojokucpaga.php?aff_sub=%pixel% 
+* timeout - how many seconds wait for
+
+* ratio - the sequence number to be sent. For example, 
 
  * if ratio == 1, send each
+
  * if ratio == 2, send each second
+
  * if ratio == 10, skip 9 and send the last one, 10-th pixel notification
 
-### ```pixel_transactions```
+### pixel_transactions
 
-In the table ```xmp_pixel_transactions```, endpoint - is actually used endpoint. 
+In the table xmp_pixel_transactions, endpoint - is actually used endpoint. 
 
-```
     CREATE TABLE public.xmp_pixel_transactions (
         id SERIAL PRIMARY KEY,
         created_at TIMESTAMP NOT NULL DEFAULT now(),
@@ -138,7 +139,7 @@ In the table ```xmp_pixel_transactions```, endpoint - is actually used endpoint.
         publisher VARCHAR(511) NOT NULL DEFAULT '',
         response_code INT NOT NULL DEFAULT 0
     );
-```
+
 
 ### API
 
