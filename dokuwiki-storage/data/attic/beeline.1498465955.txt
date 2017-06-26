@@ -2,9 +2,9 @@
 
 ### Описание
 
-* ```platform.ru.linkit360.ru``` 
-* ```proxy_pass_header Set-Cookie;``` - для хранения сессии (tid)
-* ```underscores_in_headers on;```  - не используется, нужен для мобилинка 
+* platform.ru.linkit360.ru 
+* <code>proxy_pass_header Set-Cookie;</code> - для хранения сессии (tid)
+* <code>underscores_in_headers on;</code> - не используется, нужен для мобилинка 
 * 80 порт проброшен на  http://127.0.0.1:50300; - dispatcherd
 * /api смотрит на   http://127.0.0.1:50306; - API оператора
 

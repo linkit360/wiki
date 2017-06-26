@@ -2,11 +2,11 @@
 
 ### Описание
 
-* ```platform.ru.linkit360.ru``` 
-* ```proxy_pass_header Set-Cookie;``` - для хранения сессии (tid)
-* ```underscores_in_headers on;```  - не используется, нужен для мобилинка 
-* 80 порт проброшен на  http://127.0.0.1:50300; - dispatcherd
-* /api смотрит на   http://127.0.0.1:50306; - API оператора
+  *  platform.ru.linkit360.ru 
+  *  proxy_pass_header Set-Cookie; - для хранения сессии (tid)
+  *  underscores_in_headers on;  - не используется, нужен для мобилинка 
+  *  80 порт проброшен на  http://127.0.0.1:50300; - dispatcherd
+  *  /api смотрит на   http://127.0.0.1:50306; - API оператора
 
 <spoiler | Nginx config >
     map $http_upgrade $connection_upgrade {
