@@ -113,7 +113,6 @@ Here:
 * ```id_campaign``` - campaign id from campaigns table
 * ```publisher``` - publisher name, alias, etc.
 * ```endpoint``` - url where to send GET request in format: http://wap.singiku.com/pass/jojokucpaga.php?aff_sub=%pixel% 
-
 * ```timeout``` - how many seconds wait for
 * ```ratio``` - the sequence number to be sent. For example, 
 
