@@ -1,0 +1,43 @@
+### Ports
+
+* http 50305
+
+
+### Metrics
+
+*  http://localhost:50305/metrics
+
+### Locations 
+
+* /metrics
+
+### Queues 
+
+#### In
+
+* [operator_name]_mo_tarifficate
+* [operator_name]_responses
+* [operator_name]_sms_responses
+
+#### Out
+
+* [operator_name]_requests
+* [operator_name]_sms_requests
+* pixels
+
+### Tables
+
+* subscriptions 
+* retries
+* transactions
+* msisdn_blacklist
+* msisdn_postpaid
+* services
+* operators
+
+
+### Scripts
+
+* dev/retries.go 
+
+get retries from json file and put them into database (when start retries failed)

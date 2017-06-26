@@ -1,29 +1,7 @@
-a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1489420454;s:8:"modified";i:1489475115;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";b:0;s:5:"title";s:5:"Ports";s:11:"description";a:2:{s:15:"tableofcontents";a:6:{i:0;a:4:{s:3:"hid";s:5:"ports";s:5:"title";s:5:"Ports";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:1;a:4:{s:3:"hid";s:7:"metrics";s:5:"title";s:7:"Metrics";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:9:"locations";s:5:"title";s:9:"Locations";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:6:"queues";s:5:"title";s:6:"Queues";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:6:"tables";s:5:"title";s:6:"Tables";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:7:"scripts";s:5:"title";s:7:"Scripts";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:288:"Ports
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1489420454;s:8:"modified";i:1498472942;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1498472942;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"E";s:2:"id";s:10:"mt_manager";s:4:"user";s:6:"helena";s:3:"sum";s:8:"[Ports] ";s:5:"extra";s:0:"";s:10:"sizechange";i:1507;}s:11:"contributor";a:1:{s:6:"helena";s:14:"Helen Nevskaya";}s:5:"title";s:27:"Задачи сервиса";s:11:"description";a:2:{s:15:"tableofcontents";a:7:{i:0;a:4:{s:3:"hid";s:27:"задачи_сервиса";s:5:"title";s:27:"Задачи сервиса";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:1;a:4:{s:3:"hid";s:5:"ports";s:5:"title";s:5:"Ports";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:7:"metrics";s:5:"title";s:7:"Metrics";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:9:"locations";s:5:"title";s:9:"Locations";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:6:"queues";s:5:"title";s:6:"Queues";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:6:"tables";s:5:"title";s:6:"Tables";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:6;a:4:{s:3:"hid";s:7:"scripts";s:5:"title";s:7:"Scripts";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:854:"Задачи сервиса
 
-	* http 50305
+Это воркер, который занимается основной бизнес логикой.
 
-Metrics
-
-	*  <http://localhost:50305/metrics>
-
-Locations
-
-	* /metrics
-
-Queues
-
-In
-
-	* [operatorname]motarifficate
-* [operatorname]responses
-* [operatorname]smsresponses
-
-Out
-
-	* [operatorname]requests
-	* [operatorname]sms_requests
-	* pixels
-
-Tables
-
-	* subscriptions";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1489420454;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";b:0;}}
+- Добавляет/ создает новые подписки в базу - из очередей от API операторов и из диспатчера
+- Хранит кэш этих новых подписок, чтобы потом делать проверки при добавлении новых, - например, кто из них уже был подписан; Еще если оператор шлет без доп. данных уведомления о подписках, то из кэша берутся данные по номеру телефона или id транзации оператора
+- Добавлять запрос на отправку контента в СМС для…";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1489420454;s:8:"modified";i:1498472942;}s:7:"creator";s:14:"Helen Nevskaya";s:4:"user";s:6:"helena";s:11:"last_change";a:8:{s:4:"date";i:1498472942;s:2:"ip";s:11:"87.249.6.34";s:4:"type";s:1:"E";s:2:"id";s:10:"mt_manager";s:4:"user";s:6:"helena";s:3:"sum";s:8:"[Ports] ";s:5:"extra";s:0:"";s:10:"sizechange";i:1507;}s:11:"contributor";a:1:{s:6:"helena";s:14:"Helen Nevskaya";}}}
