@@ -1,0 +1,32 @@
+### Purpose
+
+Savely add records in database 
+
+### Ports
+
+* http 50304
+
+### Metrics
+
+* http://localhost:50304/metrics
+
+### Locations 
+
+* /metrics
+
+### Queues 
+
+#### In
+
+* access_campaign
+* user_actions
+* content_sent
+* operator_transactions
+
+### Tables
+
+* campaigns_access
+* user_actions
+* content_sent
+* operator_transaction_log
+* campaigns 
