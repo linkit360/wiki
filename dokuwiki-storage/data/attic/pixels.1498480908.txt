@@ -60,9 +60,9 @@ Remember to call cqr request to inmem service after editing pixel settings.
 
 ### Tables
 
-* ```pixel_settings```
-* ```pixel_transactions```
-* ```subscriptions```
+* pixel_settings
+* pixel_transactions
+* subscriptions
 
 ### Explanation
 Daemon to send pixels. Pixels are hashes sent by a publisher to us, so we could inform them "this msisdn was ok" using a callback. 
