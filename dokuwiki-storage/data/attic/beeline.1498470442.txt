@@ -86,13 +86,11 @@
 
 ### Testing 
 
-Для тестирования SMPP пакетов приходящих от beeline на dev поднят smpp selenium server.  Чтобы его запустить, нужно его запустить и открыть smpp.dev.pk.linkit360.ru, либо задать параметры в GET запросе:
+How to run test:
 
-Тестирование beeline лэнда происходит только на боевом сервере, тк согласован только один IP адрес.
-
-```cd /var/www/SMPPSim```
-```./startwith.sh conf/smppsim.props```
-```get url http://smpp.dev.pk.linkit360.ru/inject_mo?short_message=Hello+from+SMPPSim&source_addr=79661904936&destination_addr=8580&submit=Submit+Message&service_type=&source_addr_ton=1&source_addr_npi=1&dest_addr_ton=1&dest_addr_npi=1&esm_class=0&protocol_ID=&priority_flag=&registered_delivery_flag=0&data_coding=0&user_message_reference=&source_port=4&destination_port=&sar_msg_ref_num=&sar_total_segments=&sar_segment_seqnum=&user_response_code=&privacy_indicator=&payload_type=&message_payload=&callback_num=&source_subaddress=&dest_subaddress=&language_indicator=&tlv1_tag=&tlv1_len=&tlv1_val=&tlv2_tag=&tlv2_len=&tlv2_val=&tlv3_tag=&tlv3_len=&tlv3_val=&tlv4_tag=&tlv4_len=&tlv4_val=&tlv5_tag=&tlv5_len=&tlv5_val=&tlv6_tag=&tlv6_len=&tlv6_val=&tlv7_tag=&tlv7_len=&tlv7_val=```
+cd /var/www/SMPPSim
+./startwith.sh conf/smppsim.props
+get url http://smpp.dev.pk.linkit360.ru/inject_mo?short_message=Hello+from+SMPPSim&source_addr=79661904936&destination_addr=8580&submit=Submit+Message&service_type=&source_addr_ton=1&source_addr_npi=1&dest_addr_ton=1&dest_addr_npi=1&esm_class=0&protocol_ID=&priority_flag=&registered_delivery_flag=0&data_coding=0&user_message_reference=&source_port=4&destination_port=&sar_msg_ref_num=&sar_total_segments=&sar_segment_seqnum=&user_response_code=&privacy_indicator=&payload_type=&message_payload=&callback_num=&source_subaddress=&dest_subaddress=&language_indicator=&tlv1_tag=&tlv1_len=&tlv1_val=&tlv2_tag=&tlv2_len=&tlv2_val=&tlv3_tag=&tlv3_len=&tlv3_val=&tlv4_tag=&tlv4_len=&tlv4_val=&tlv5_tag=&tlv5_len=&tlv5_val=&tlv6_tag=&tlv6_len=&tlv6_val=&tlv7_tag=&tlv7_len=&tlv7_val=
 
 # Scheme 
 
