@@ -1,22 +1,3 @@
-1497602197	87.249.6.34	D	acceptor	helena	removed		-842
-1497602219	87.249.6.34	D	reporter	helena	removed		-4501
-1497602240	87.249.6.34	D	rpc_inmemory	helena	removed		-1051
-1497602251	87.249.6.34	E	start	helena	[Services] 		-125
-1497602314	87.249.6.34	E	start	helena	[Workflow] 		-6
-1497602322	87.249.6.34	E	start	helena	[[[Backlog|Backlog]]] 		-1
-1497602359	87.249.6.34	E	start	helena			-7
-1497603348	87.249.6.34	E	start	helena	[Telco:] 		-30
-1497603761	87.249.6.34	E	mobilink-sd	kirill			-595
-1497604184	87.249.6.34	E	start	helena	[Services] 		-37
-1497604299	87.249.6.34	E	qrtech	helena	[Queues] 		10
-1497604319	87.249.6.34	E	qrtech	helena	[Locations] 		-95
-1497605964	87.249.6.34	E	qrtech	helena			547
-1497605980	87.249.6.34	E	qrtech	helena	[Test Flow] 		46
-1497606029	87.249.6.34	E	qrtech	helena	[Test Flow] 		1
-1497611929	87.249.6.34	E	qrtech	helena	[Test Flow] 		148
-1497613253	87.249.6.34	E	qrtech	helena	[Test Flow] 		70
-1497621694	87.249.6.34	E	cheese	helena			102
-1497621724	87.249.6.34	E	cheese	helena	[Cheese] 		-20
 1498031901	185.182.81.73	E	mobilink	helena	[Scheme] 		114
 1498465515	87.249.6.34	E	mobilink-sd	kirill			576
 1498465564	87.249.6.34	E	mobilink-sd	kirill			17
@@ -42,7 +23,6 @@
 1498471743	87.249.6.34	E	beeline	helena	[Overview] 		30
 1498472025	87.249.6.34	E	beeline	helena	[Testing] 		621
 1498472206	87.249.6.34	E	beeline	helena	[Контактные лица и правила для уточнения технических деталей] 		2
-1489475115	127.0.0.1	E	mt_manager		external edit		0
 1498472942	87.249.6.34	E	mt_manager	helena	[Ports] 		1507
 1498473495	87.249.6.34	E	mt_manager	helena	[Задачи сервиса] 		1463
 1498473714	87.249.6.34	E	mt_manager	helena	[Задачи сервиса] 		-826
@@ -55,7 +35,6 @@
 1498474183	87.249.6.34	E	mt_manager	helena	[Задачи сервиса] 		92
 1498474200	87.249.6.34	E	mt_manager	helena	[Задачи сервиса] 		-3
 1498474287	87.249.6.34	E	mt_manager	helena	[Задачи сервиса] 		4
-1489475115	127.0.0.1	E	dispatcherd		external edit		0
 1498475077	87.249.6.34	E	dispatcherd	helena	[Ports] 		1752
 1498475092	87.249.6.34	E	dispatcherd	helena	[Задачи] 		2
 1498475220	87.249.6.34	E	dispatcherd	helena	[Задачи] 		0
@@ -72,7 +51,6 @@
 1498481389	87.249.6.34	E	pixels	helena	[pixel_settings] 		75
 1498481773	87.249.6.34	E	pixels	helena	[```pixel_transactions```] 		-6
 1498481797	87.249.6.34	E	pixels	helena	[pixel_settings] 		1
-1489475115	127.0.0.1	E	contentd		external edit		0
 1498482517	87.249.6.34	E	contentd	helena	[Ports] 		613
 1498482525	87.249.6.34	E	contentd	helena	[Сервис раздачи контента] 		1
 1498482552	87.249.6.34	E	start	helena	[Services] 		15
@@ -80,12 +58,10 @@
 1498483525	87.249.6.34	E	mid	helena			568
 1498483787	87.249.6.34	E	mid	helena			690
 1498484961	87.249.6.34	E	mid	helena	[Как обновления с панели управления попадают на mid?] 		370
-1489475115	127.0.0.1	E	q-listener		external edit		0
 1498486081	87.249.6.34	E	q-listener	helena	[Purpose] 		1256
 1498486090	87.249.6.34	E	q-listener	helena	[Описание] 		1
 1498486186	87.249.6.34	E	q-listener	helena	[Описание] 		135
 1498486455	87.249.6.34	E	mobilink	helena	[Testing] 		26
-1489475115	127.0.0.1	E	yondu		external edit		0
 1498489016	87.249.6.34	E	yondu	helena			1490
 1498489487	87.249.6.34	E	yondu	helena	[Описание как должно работать] 		574
 1498489702	87.249.6.34	E	yondu	helena	[Описание как должно работать] 		392
