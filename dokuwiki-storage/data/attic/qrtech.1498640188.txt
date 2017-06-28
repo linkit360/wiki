@@ -45,9 +45,7 @@
 
 #### mt manager 
 
-```qrtech_mo``` - кэшируем и записываем в базу новую подписку. 
 
-```qrtech_dn```  - если такой подписки нет, создаем ее. Обрабатываем как в mobilink - write transaction, update subscription status. 
 
 ### Test Flow
 
