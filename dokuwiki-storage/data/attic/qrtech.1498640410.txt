@@ -49,26 +49,10 @@
 
 ```qrtech_dn```  - если такой подписки нет, создаем ее. Обрабатываем как в mobilink - write transaction, update subscription status. 
 
-
-
-| User Hit |  Subscription |  Charging | Single/Periodic |  Content Delivery |  Unsubscription | 
-| есть логгирование | есть обработка уведомлений | есть обработка уведомлений  | periodic, запросы отправляет qrtech |  есть, на стороне qrtech отправляется ссылка на наш контент | на стороне qrtech |
-
-
-
-
-
 ### Test Flow
 
 #### Landing
 
-* curl -v -L http://platform.th.linkit360.ru/qrlp/qrgames?telco=dtac
-* curl -v -L http://platform.th.linkit360.ru/qrlp/qrgames?telco=ais
-
-
-#### Content 
-
-curl -v -L http://platform.th.linkit360.ru/qr/get 
 
 #### API MO call
 
@@ -84,10 +68,23 @@ curl -v -X POST --data "motoken=qny6qv3sfqhkixjcpe&dnid=_msgid123&msisdn=6681919
 * found service and campaign 
 * sent in queue 
 
+#### Land 
+
+* curl -v -L http://platform.th.linkit360.ru/qrlp/qrgames?telco=dtac
+* curl -v -L http://platform.th.linkit360.ru/qrlp/qrgames?telco=ais
+
+#### Content 
+
+curl -v -L http://platform.th.linkit360.ru/qr/get 
+
 ### Scheme
 
  {{ undefined:qrtech.png }}
 
+### LP
+
+* http://platform.th.linkit360.ru/qrlp/mobilink-p2?msisdn=928777777777&aff_sub=5432104769mb85528554321
+* url is passed on the html in {{ .Url }} variable
 
 ### About
 

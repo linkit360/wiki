@@ -49,15 +49,6 @@
 
 ```qrtech_dn```  - если такой подписки нет, создаем ее. Обрабатываем как в mobilink - write transaction, update subscription status. 
 
-
-
-| User Hit |  Subscription |  Charging | Single/Periodic |  Content Delivery |  Unsubscription | 
-| есть логгирование | есть обработка уведомлений | есть обработка уведомлений  | periodic, запросы отправляет qrtech |  есть, на стороне qrtech отправляется ссылка на наш контент | на стороне qrtech |
-
-
-
-
-
 ### Test Flow
 
 #### Landing
